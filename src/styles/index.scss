@@ -1,5 +1,20 @@
 @import "./colors.scss";
 
+
+* {           // This will do global rest of styles 
+    margin: 0;   // Will remove default margins of h1 etc..
+    padding: 0;
+    box-sizing: border-box;   // This will change box not to have padding and border;
+}
+
+body {
+    font-family: "Lato", "Roboto", sans-serif;  // Default font type for whole application
+    font-weight: 400;  // Default fount weight
+    font-size: 16px;   // Default font-size
+    line-height: 1.7;  // Default line-height
+    color: #777777;  // Default font color
+}
+
 .App {
-  text-align: center;
+  @import './header/index.scss';
 }
