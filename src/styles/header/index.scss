@@ -1,5 +1,12 @@
 .header {
     height: 95vh;  // It should always be 95% of view height;
-    background-image: url(../assets/img/hero.jpg);
-    background-size: cover;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(126,213,111,0.8),
+        rgba(40,180,131,0.8)),
+        url(./assets/img/hero.jpg);
+    background-size: cover; // it will try to fit element to the width of the box
+    background-position: top;  // This will not chop image on the
+    
+    clip-path: polygon(0 0,100% 0,100% 75%, 0 100%) // This will clip the image at the bottom; Defining 4 coordinates of the polygon
 }
