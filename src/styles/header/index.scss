@@ -67,6 +67,13 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;
       }
+      .btn {
+        @import "./common/button.scss";
+      }
+      .btn-white {
+        background: #fff;
+        color: #777777;
+      }
     }
 
     // This section will handel animations

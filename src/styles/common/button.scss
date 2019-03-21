@@ -1,0 +1,16 @@
+.btn:link,
+.btn:visited {
+  // both of these states together
+  // link is special case of a button when it's an anchor
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  // By default it's an inline button;
+
+  display: inline-block; // We should always do that, if we want to give some height or paddings to elements
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}

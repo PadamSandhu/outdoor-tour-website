@@ -1,6 +1,8 @@
 import React from "react";
 import whiteLogo from "assets/img/logo-white.png";
 
+import Button from "../common/button";
+
 export const Header = () => {
   return (
     <div className="header">
@@ -13,6 +15,7 @@ export const Header = () => {
           <span className="heading-primary-main"> Outdoors </span>
           <span className="heading-primary-sub"> is where life happens </span>
         </h1>
+        <Button text="Discover our tours" class="btn-white" />
       </div>
     </div>
   );
