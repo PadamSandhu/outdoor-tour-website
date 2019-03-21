@@ -116,6 +116,19 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "assets": "./src/styles/assets"
+          }
+        }
+      ]
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0"
   }
 }

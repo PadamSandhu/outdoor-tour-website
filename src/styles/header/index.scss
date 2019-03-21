@@ -8,5 +8,39 @@
     background-size: cover; // it will try to fit element to the width of the box
     background-position: top;  // This will not chop image on the
     
-    clip-path: polygon(0 0,100% 0,100% 75%, 0 100%) // This will clip the image at the bottom; Defining 4 coordinates of the polygon
+    clip-path: polygon(0 0,100% 0,100% 75%, 0 100%); // This will clip the image at the bottom; Defining 4 coordinates of the polygon
+
+    position: relative; /// This is required for .logo-box to be  a reference (ex 40px to top of this element)
+
+    .logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        
+        .logo {
+            height: 35px;  // only specify the height and width will automatically adjust
+        }
+    }
+
+    .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
+
+        // Block elements take complete width so it would be good to make heading-main and sub to be both block level components
+
+        .heading-primary-main {
+            display: block; // This will take complete width of the screen
+            font-size: 60px;
+            font-weight: 700;
+            letter-spacing: 35px;
+        }
+
+        .heading-primary-sub {
+            display: block; // This will take complete width of the screen
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 17.4px;
+        }
+    }
+    
 }
