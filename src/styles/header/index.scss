@@ -47,6 +47,14 @@
         font-size: 60px;
         font-weight: 700;
         letter-spacing: 35px;
+
+        /// The code below handel animation
+        animation-name: moveInLeft; // We need to create animation name for this to work
+        animation-duration: 1s;
+
+        // animation-delay: 2s;
+        // animation-iteration-count: 3;  // This will  happen 3 times
+        animation-timing-function: ease-out; // This is the function where we can give multiple different animation
       }
 
       .heading-primary-sub {
@@ -54,6 +62,52 @@
         font-size: 20px;
         font-weight: 700;
         letter-spacing: 17.4px;
+
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+      }
+    }
+
+    // This section will handel animations
+
+    // Note for browser ony two property we should transform is
+    // opacity and transform for performance issue
+    @keyframes moveInLeft {
+      0% {
+        // 0% is when animation starts
+        opacity: 0;
+        transform: translateX(-100px); // we want to start our animation like this
+      }
+
+      80% {
+        // Something to happen when animation is at 80%
+        transform: translate(10px); // this will go 20 px to right from original postion
+      }
+
+      100% {
+        // 100% is when animation finish
+        opacity: 1;
+        transform: translate(0); // This will make it look, how it looks now
+      }
+    }
+
+    @keyframes moveInRight {
+      0% {
+        // 0% is when animation starts
+        opacity: 0;
+        transform: translateX(100px); // we want to start our animation like this
+      }
+
+      80% {
+        // Something to happen when animation is at 80%
+        transform: translate(-10px); // this will go 20 px to right from original postion
+      }
+
+      100% {
+        // 100% is when animation finish
+        opacity: 1;
+        transform: translate(0); // This will make it look, how it looks now
       }
     }
   }
