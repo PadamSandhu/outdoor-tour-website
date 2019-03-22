@@ -1,4 +1,4 @@
-.btn:link,
+.btn:link,  // This is initial link state
 .btn:visited {
   // both of these states together
   // link is special case of a button when it's an anchor
@@ -7,7 +7,25 @@
   padding: 15px 40px;
   // By default it's an inline button;
 
+  // inline-block will enable box model
   display: inline-block; // We should always do that, if we want to give some height or paddings to elements
+
+  border-radius: 100px; // Put really high number to make it rounded button. (Any high number is fine)
+
+  // This will do translate
+  transition: all 0.2s; // Short hand of writing properties. (this should be on initial state)
+}
+
+.btn:hover {
+  // When we hover over an element
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2); // 0-> shadow in x direction , 10px-> shadow in y direction, 20px -> blur in some direction , last is color and transparency
+}
+
+.btn:active {
+  // When chick a button this class is activated
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
 }
 
 .btn-white {
