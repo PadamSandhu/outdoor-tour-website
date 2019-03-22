@@ -15,7 +15,7 @@ export const Header = () => {
           <span className="heading-primary-main"> Outdoors </span>
           <span className="heading-primary-sub"> is where life happens </span>
         </h1>
-        <Button text="Discover our tours" class="btn-white" />
+        <Button text="Discover our tours" class="btn-white btn-animated" />
       </div>
     </div>
   );

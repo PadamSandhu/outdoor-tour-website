@@ -14,6 +14,9 @@
 
   // This will do translate
   transition: all 0.2s; // Short hand of writing properties. (this should be on initial state)
+
+  // This is for the sudo class reference;
+  position: relative;
 }
 
 .btn:hover {
@@ -31,4 +34,51 @@
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+// Sudo elements (Let's you animate certain parts of css)
+
+.btn::after {
+  content: ""; // Mandatory property
+  display: inline-block; // Mandatory Property
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  // Put this property behind the button;
+  position: absolute; // Absolute position reference is first relative position it can find
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+// We want to do something when hovered
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6); // It will scale the element 1.5 the original size!!
+  opacity: 0; // This will fadeout to zero
+}
+
+.btn-animated {
+  // This is the Animation of button going up
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; /// This option will fade in the element (We woudn't see element when page loads)
+}
+
+@keyframes moveInBottom {
+  0% {
+    // 0% is when animation starts
+    opacity: 0;
+    transform: translateY(30px); // we want to start our animation like this
+  }
+
+  100% {
+    // 100% is when animation finish
+    opacity: 1;
+    transform: translate(0); // This will make it look, how it looks now
+  }
 }
