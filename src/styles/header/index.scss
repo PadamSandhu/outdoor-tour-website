@@ -14,7 +14,7 @@
 
   position: relative; /// This is required for .logo-box to be  a reference (ex 40px to top of this element)
 
-  .logo-box {
+  .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
@@ -24,7 +24,7 @@
     }
   }
 
-  .text-box {
+  .header__text-box {
     // We are trying to center this in the middle of a page;
     position: absolute; // This will be positioned in reference to relative parent;
     left: 50%; // This is in reference to it's parent and text-box
@@ -45,7 +45,7 @@
 
       // Block elements take complete width so it would be good to make heading-main and sub to be both block level components
 
-      .heading-primary-main {
+      .heading-primary--main {
         display: block; // This will take complete width of the screen
         font-size: 6rem;
         font-weight: 700;
@@ -60,7 +60,7 @@
         animation-timing-function: ease-out; // This is the function where we can give multiple different animation
       }
 
-      .heading-primary-sub {
+      .heading-primary--sub {
         display: block; // This will take complete width of the screen
         font-size: 20px;
         font-weight: 700;
