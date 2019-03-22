@@ -1,6 +1,6 @@
 .header {
   height: 95vh; // It should always be 95% of view height;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)),
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
     url(./assets/img/hero.jpg);
   background-size: cover; // it will try to fit element to the width of the box
   background-position: top; // This will not chop image on the
@@ -14,12 +14,12 @@
 
   position: relative; /// This is required for .logo-box to be  a reference (ex 40px to top of this element)
 
-  .header__logo-box {
+  &__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 
-    .logo {
+    .header__logo {
       height: 3.5rem; // only specify the height and width will automatically adjust
     }
   }
@@ -39,13 +39,13 @@
     ); // This is just in reference .text-box it self  (this will move the current element 50% left and 50% top
 
     .heading-primary {
-      color: #fff;
+      color: $color-white;
       text-transform: uppercase;
       margin-bottom: 6rem;
 
       // Block elements take complete width so it would be good to make heading-main and sub to be both block level components
 
-      .heading-primary--main {
+      &--main {
         display: block; // This will take complete width of the screen
         font-size: 6rem;
         font-weight: 700;
@@ -60,7 +60,7 @@
         animation-timing-function: ease-out; // This is the function where we can give multiple different animation
       }
 
-      .heading-primary--sub {
+      &--sub {
         display: block; // This will take complete width of the screen
         font-size: 20px;
         font-weight: 700;
@@ -72,50 +72,8 @@
       }
 
       .btn-white {
-        background: #fff;
-        color: #777777;
-      }
-    }
-
-    // This section will handel animations
-
-    // Note for browser ony two property we should transform is
-    // opacity and transform for performance issue
-    @keyframes moveInLeft {
-      0% {
-        // 0% is when animation starts
-        opacity: 0;
-        transform: translateX(-10rem); // we want to start our animation like this
-      }
-
-      80% {
-        // Something to happen when animation is at 80%
-        transform: translate(1rem); // this will go 20 px to right from original position
-      }
-
-      100% {
-        // 100% is when animation finish
-        opacity: 1;
-        transform: translate(0); // This will make it look, how it looks now
-      }
-    }
-
-    @keyframes moveInRight {
-      0% {
-        // 0% is when animation starts
-        opacity: 0;
-        transform: translateX(10rem); // we want to start our animation like this
-      }
-
-      80% {
-        // Something to happen when animation is at 80%
-        transform: translate(-1rem); // this will go 20 px to right from original postion
-      }
-
-      100% {
-        // 100% is when animation finish
-        opacity: 1;
-        transform: translate(0); // This will make it look, how it looks now
+        background: $color-white;
+        color: $color-grey-dark;
       }
     }
   }
