@@ -4,13 +4,13 @@
   // link is special case of a button when it's an anchor
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   // By default it's an inline button;
 
   // inline-block will enable box model
   display: inline-block; // We should always do that, if we want to give some height or paddings to elements
 
-  border-radius: 100px; // Put really high number to make it rounded button. (Any high number is fine)
+  border-radius: 10rem; // Put really high number to make it rounded button. (Any high number is fine)
 
   // This will do translate
   transition: all 0.2s; // Short hand of writing properties. (this should be on initial state)
@@ -21,14 +21,14 @@
 
 .btn:hover {
   // When we hover over an element
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2); // 0-> shadow in x direction , 10px-> shadow in y direction, 20px -> blur in some direction , last is color and transparency
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2); // 0-> shadow in x direction , 10px-> shadow in y direction, 20px -> blur in some direction , last is color and transparency
 }
 
 .btn:active {
   // When chick a button this class is activated
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba($color: #000000, $alpha: 0.2);
 }
 
 .btn-white {
@@ -43,7 +43,7 @@
   display: inline-block; // Mandatory Property
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   // Put this property behind the button;
   position: absolute; // Absolute position reference is first relative position it can find
   top: 0;
@@ -73,7 +73,7 @@
   0% {
     // 0% is when animation starts
     opacity: 0;
-    transform: translateY(30px); // we want to start our animation like this
+    transform: translateY(3rem); // we want to start our animation like this
   }
 
   100% {

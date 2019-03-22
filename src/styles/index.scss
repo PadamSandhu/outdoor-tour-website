@@ -7,17 +7,22 @@
   box-sizing: border-box; // This will change box not to have padding and border;
 }
 
+html {
+  // This is the root font size!!
+  font-size: 62.5%; // Now 1 rem === 10px default font size of browser is 16px
+}
+
 body {
   font-family: "Lato", "Roboto", sans-serif; // Default font type for whole application
   font-weight: 400; // Default fount weight
-  font-size: 16px; // Default font-size
   line-height: 1.7; // Default line-height
   color: #777777; // Default font color
+  font-size: 1.6rem;
 }
 
 .App {
   @import "./header/index.scss";
-  padding: 30px;
+  padding: 3rem;
 
   @import "./common/button.scss";
 }

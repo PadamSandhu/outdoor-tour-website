@@ -16,11 +16,11 @@
 
   .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 
     .logo {
-      height: 35px; // only specify the height and width will automatically adjust
+      height: 3.5rem; // only specify the height and width will automatically adjust
     }
   }
 
@@ -41,15 +41,15 @@
     .heading-primary {
       color: #fff;
       text-transform: uppercase;
-      margin-bottom: 60px;
+      margin-bottom: 6rem;
 
       // Block elements take complete width so it would be good to make heading-main and sub to be both block level components
 
       .heading-primary-main {
         display: block; // This will take complete width of the screen
-        font-size: 60px;
+        font-size: 6rem;
         font-weight: 700;
-        letter-spacing: 35px;
+        letter-spacing: 3.5rem;
 
         /// The code below handel animation
         animation-name: moveInLeft; // We need to create animation name for this to work
@@ -64,7 +64,7 @@
         display: block; // This will take complete width of the screen
         font-size: 20px;
         font-weight: 700;
-        letter-spacing: 17.4px;
+        letter-spacing: 1.74rem;
 
         animation-name: moveInRight;
         animation-duration: 1s;
@@ -85,12 +85,12 @@
       0% {
         // 0% is when animation starts
         opacity: 0;
-        transform: translateX(-100px); // we want to start our animation like this
+        transform: translateX(-10rem); // we want to start our animation like this
       }
 
       80% {
         // Something to happen when animation is at 80%
-        transform: translate(10px); // this will go 20 px to right from original postion
+        transform: translate(1rem); // this will go 20 px to right from original position
       }
 
       100% {
@@ -104,12 +104,12 @@
       0% {
         // 0% is when animation starts
         opacity: 0;
-        transform: translateX(100px); // we want to start our animation like this
+        transform: translateX(10rem); // we want to start our animation like this
       }
 
       80% {
         // Something to happen when animation is at 80%
-        transform: translate(-10px); // this will go 20 px to right from original postion
+        transform: translate(-1rem); // this will go 20 px to right from original postion
       }
 
       100% {
