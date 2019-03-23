@@ -1,6 +1,6 @@
 .row {
   max-width: $grid-width; // if 114rem width is available, than fill that or else fill max width
-  background-color: #eee;
+  // background-color: #eee;
   margin: 0 auto; // Center block element inside another block element.
 
   &:not(:last-child) {
@@ -11,7 +11,7 @@
 
   [class^="col-"] {
     // Select classes which begins with col-
-    background-color: orangered;
+    // background-color: orangered;
     float: left;
 
     &:not(:last-child) {
@@ -23,7 +23,7 @@
 
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
-    background-color: orangered; // This one has full code
+    // background-color: orangered; // This one has full code
     float: left;
 
     &:not(:last-child) {
