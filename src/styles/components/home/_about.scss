@@ -5,3 +5,19 @@
     margin-top: -25vh; // Found this after doing the math of Vh
   }
 }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url(./assets/img/nat-4.jpg);
+  background-size: cover; // it will try to fit element to the width of the box
+  background-position: top; // This will not chop image on the
+
+  transform: skewY(-7deg); // Skew parent component and skew back all the child components back
+
+  & > * {
+    // This will select only direct child of this section-feature
+
+    transform: skewY(7deg);
+  }
+}
