@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Section() {
+export default function Features() {
   return (
     <section className="section-features">
       <div className="row">

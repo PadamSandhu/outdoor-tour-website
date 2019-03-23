@@ -14,8 +14,10 @@
 @import "components/header/index";
 @import "components/common/button";
 @import "components/common/composition";
+@import "components/common/card";
 @import "components/home/about";
-@import "components/home/_section";
+@import "components/home/features";
+@import "components/home/tours";
 
 .App {
   padding: 3rem;

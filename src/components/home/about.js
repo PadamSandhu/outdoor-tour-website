@@ -1,7 +1,7 @@
 import React from "react";
 import Composition from "./composition";
-import Section from "./section";
-
+import Features from "./features";
+import Tours from "./tours";
 export const About = () => {
   return (
     <main className="about">
@@ -43,7 +43,8 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <Section />
+      <Features />
+      <Tours />
     </main>
   ); // just to tell search engines that this is the main section
 };
