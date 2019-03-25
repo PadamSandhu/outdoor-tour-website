@@ -35,6 +35,19 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary;
+    }
   }
 
   // Sudo elements (Let's you animate certain parts of css)
@@ -52,10 +65,6 @@
     z-index: -1;
 
     transition: all 0.4s;
-  }
-
-  &--white::after {
-    background-color: $color-white;
   }
 
   // We want to do something when hovered

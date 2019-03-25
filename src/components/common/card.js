@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Card(props) {
+  console.log(props);
   const customClass = props.customClass ? props.customClass : '';
   return (
     <div className="card">
@@ -22,7 +23,19 @@ export default function Card(props) {
         </div>
       </div>
 
-      <div className={`card__side card__side--back card__side--back--${customClass}`}>Back</div>
+      <div className={`card__side card__side--back card__side--back--${customClass}`}>
+        {props.backCard ? (
+          <div className="card__cta">
+            <div className="card__price-box">
+              <p className="card__price-only">{props.backCard.p1 ? props.backCard.p1 : null}</p>
+              <p class="card__price-value">{props.backCard.p2 ? props.backCard.p2 : null}</p>
+            </div>
+            <a href="#" className="btn btn--white">
+              {props.backCard.b1 ? props.backCard.b1 : null}
+            </a>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -34,6 +34,14 @@
       &--card-1 {
         background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
       }
+
+      &--card-2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+      }
+
+      &--card-3 {
+        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+      }
     }
   }
 
@@ -67,6 +75,19 @@
       // We can blend two images or an image and gradient;
       background-blend-mode: screen; // This property doesn't work with IE
     }
+
+    &--card-2 {
+      background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+        url(./assets/img/nat-6.jpg);
+      // We can blend two images or an image and gradient;
+      background-blend-mode: screen; // This property doesn't work with IE
+    }
+    &--card-3 {
+      background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+        url(./assets/img/nat-7.jpg);
+      // We can blend two images or an image and gradient;
+      background-blend-mode: screen; // This property doesn't work with IE
+    }
   }
 
   &__heading {
@@ -94,6 +115,22 @@
         rgba($color-secondary-dark, 0.85)
       );
     }
+
+    &--card-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+
+    &--card-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
   }
 
   &__details {
@@ -114,5 +151,32 @@
         }
       }
     }
+  }
+
+  // Back Side Styling
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; // This option gave some width;
+    // Center the button;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $color-white;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
   }
 }
