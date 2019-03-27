@@ -3,6 +3,7 @@ import Composition from './composition';
 import Features from './features';
 import Tours from './tours';
 import Stories from './stories';
+import Booking from './booking';
 
 export const About = () => {
   return (
@@ -39,6 +40,7 @@ export const About = () => {
       <Features />
       <Tours />
       <Stories />
+      <Booking />
     </main>
   ); // just to tell search engines that this is the main section
 };
