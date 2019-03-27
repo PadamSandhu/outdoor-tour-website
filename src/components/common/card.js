@@ -28,7 +28,7 @@ export default function Card(props) {
           <div className="card__cta">
             <div className="card__price-box">
               <p className="card__price-only">{props.backCard.p1 ? props.backCard.p1 : null}</p>
-              <p class="card__price-value">{props.backCard.p2 ? props.backCard.p2 : null}</p>
+              <p className="card__price-value">{props.backCard.p2 ? props.backCard.p2 : null}</p>
             </div>
             <a href="#" className="btn btn--white">
               {props.backCard.b1 ? props.backCard.b1 : null}
